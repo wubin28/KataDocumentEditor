@@ -32,12 +32,15 @@ TEST( DocumentEditorFacade, drawScreen) {
     documentEditorFacade.drawScreen();
 
     // Then
-    CHECK("red" == documentEditorFacade.getColor(0, 7));
-    CHECK("orange" == documentEditorFacade.getColor(0, 20));
-    CHECK("yellow" == documentEditorFacade.getColor(0, 33));
-    CHECK("green" == documentEditorFacade.getColor(1, 7));
-    CHECK("blue" == documentEditorFacade.getColor(1, 15));
-    CHECK("indigo" == documentEditorFacade.getColor(1, 31));
-    CHECK("violet" == documentEditorFacade.getColor(2, 12));
+    STRCMP_EQUAL("black", documentEditorFacade.getColor(0,0).c_str());
+    STRCMP_EQUAL("black", documentEditorFacade.getColor(0,1).c_str());
+    STRCMP_EQUAL("red", documentEditorFacade.getColor(0, 8).c_str());
+    STRCMP_EQUAL("red", documentEditorFacade.getColor(0,9).c_str());
+    STRCMP_EQUAL("orange", documentEditorFacade.getColor(0, 20).c_str());
+    STRCMP_EQUAL("yellow", documentEditorFacade.getColor(0, 33).c_str());
+    STRCMP_EQUAL("green", documentEditorFacade.getColor(1, 7).c_str());
+    STRCMP_EQUAL("blue", documentEditorFacade.getColor(1, 15).c_str());
+    STRCMP_EQUAL("indigo", documentEditorFacade.getColor(1, 31).c_str());
+    STRCMP_EQUAL("violet", documentEditorFacade.getColor(2, 12).c_str());
 
 }
