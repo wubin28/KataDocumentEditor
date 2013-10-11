@@ -13,4 +13,5 @@ TEST( DocumentEditorFacade, creation)
     DocumentEditorFacade documentEditorFacade;
     CHECK ( 1 == documentEditorFacade.sayOne() );
     LONGS_EQUAL ( 1 , documentEditorFacade.sayOne() );
+    CHECK ( "Hello!" == documentEditorFacade.sayHello() );
 }
