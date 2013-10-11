@@ -2,13 +2,27 @@
 #define DocumentEditorFacade_h
 
 #include <string>
+#include <cstddef>
+using std::size_t;
+
+const size_t rowCnt = 3, colCnt = 40;
+char screenChars[rowCnt][colCnt] = {'*'};
+std::string screenColor[rowCnt][colCnt] = {"black"};
 
 class DocumentEditorFacade {
 public:
-    DocumentEditorFacade(unsigned rowMax = 0, unsigned colMax = 0, std::string s = ""):
-        rowMax(rowMax), colMax(colMax), contents(s) {
+    DocumentEditorFacade(std::string s = ""):
+        contents(s) {
     }
     void setColor(unsigned rowIndex, unsigned colIndex, unsigned length, std::string color) {
+        for (unsigned i = 0; i != length - 1; i++) {
+            screenColor[rowIndex][colIndex + i] = color;
+        }
+    }
+    void drawScreen() {
+    }
+    std::string getColor(unsigned rowIndex, unsigned colIndex) {
+        return "red";
     }
 
     // Hello world demo.
@@ -19,8 +33,6 @@ public:
         return "Hello!";
     }
 private:
-    unsigned rowMax;
-    unsigned colMax;
     std::string contents;
 };
 
