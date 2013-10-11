@@ -7,7 +7,7 @@ using std::size_t;
 
 const size_t rowCnt = 3, colCnt = 40;
 char screenChars[rowCnt][colCnt] = {'*'};
-std::string screenColor[rowCnt][colCnt] = {"black"};
+std::string screenColors[rowCnt][colCnt] = {"black"};
 
 class DocumentEditorFacade {
 public:
@@ -16,13 +16,13 @@ public:
     }
     void setColor(unsigned rowIndex, unsigned colIndex, unsigned length, std::string color) {
         for (unsigned i = 0; i != length - 1; i++) {
-            screenColor[rowIndex][colIndex + i] = color;
+            screenColors[rowIndex][colIndex + i] = color;
         }
     }
     void drawScreen() {
     }
     std::string getColor(unsigned rowIndex, unsigned colIndex) {
-        return "red";
+        return screenColors[rowIndex][colIndex];
     }
 
     // Hello world demo.
