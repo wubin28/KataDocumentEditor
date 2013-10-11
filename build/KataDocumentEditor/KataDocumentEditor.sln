@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppUnitLite", "CppUnitLite\CppUnitLite.vcxproj", "{5C3AD28B-3A6C-43E9-8A3F-1F82916511FB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackTest", "StackTest\StackTest.vcxproj", "{0BFD19DB-0ED4-406E-ADAF-F939FF3533C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DequeTest", "DequeTest\DequeTest.vcxproj", "{D4320976-47A8-429C-B623-EB9BCC664F0B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TemplateDequeTest", "TemplateDequeTest\TemplateDequeTest.vcxproj", "{987E6DAD-E2C2-4734-92AE-01B43BB62C0C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KataDocumentEditor", "KataDocumentEditor\KataDocumentEditor.vcxproj", "{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C3AD28B-3A6C-43E9-8A3F-1F82916511FB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5C3AD28B-3A6C-43E9-8A3F-1F82916511FB}.Debug|Win32.Build.0 = Debug|Win32
+		{5C3AD28B-3A6C-43E9-8A3F-1F82916511FB}.Release|Win32.ActiveCfg = Release|Win32
+		{5C3AD28B-3A6C-43E9-8A3F-1F82916511FB}.Release|Win32.Build.0 = Release|Win32
+		{0BFD19DB-0ED4-406E-ADAF-F939FF3533C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0BFD19DB-0ED4-406E-ADAF-F939FF3533C3}.Debug|Win32.Build.0 = Debug|Win32
+		{0BFD19DB-0ED4-406E-ADAF-F939FF3533C3}.Release|Win32.ActiveCfg = Release|Win32
+		{0BFD19DB-0ED4-406E-ADAF-F939FF3533C3}.Release|Win32.Build.0 = Release|Win32
+		{D4320976-47A8-429C-B623-EB9BCC664F0B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D4320976-47A8-429C-B623-EB9BCC664F0B}.Debug|Win32.Build.0 = Debug|Win32
+		{D4320976-47A8-429C-B623-EB9BCC664F0B}.Release|Win32.ActiveCfg = Release|Win32
+		{D4320976-47A8-429C-B623-EB9BCC664F0B}.Release|Win32.Build.0 = Release|Win32
+		{987E6DAD-E2C2-4734-92AE-01B43BB62C0C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{987E6DAD-E2C2-4734-92AE-01B43BB62C0C}.Debug|Win32.Build.0 = Debug|Win32
+		{987E6DAD-E2C2-4734-92AE-01B43BB62C0C}.Release|Win32.ActiveCfg = Release|Win32
+		{987E6DAD-E2C2-4734-92AE-01B43BB62C0C}.Release|Win32.Build.0 = Release|Win32
+		{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}.Debug|Win32.Build.0 = Debug|Win32
+		{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}.Release|Win32.ActiveCfg = Release|Win32
+		{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
