@@ -23,9 +23,6 @@ public:
     Character *getCharObj(char c) {
         if (!_characters[c]) {
             _characters[c] = new Character(c);
-            // delete _characters[c];
-            //_characters[c] = nullptr;
-            // cout << "_characters[" << string(1, c) << "] is nullptr." << endl;
         }
         return _characters[c];
     }
