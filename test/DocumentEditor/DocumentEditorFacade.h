@@ -12,11 +12,14 @@ std::string screenColors[rowCnt][colCnt];
 
 class DocumentEditorFacade {
 public:
-    DocumentEditorFacade(std::string s = ""):
-        contents(s) {
-            for (auto &row : screenChars) {
-                for (auto &col : row) {
-                    col = '*';
+    DocumentEditorFacade(std::string contents = "") {
+            for (size_t i = 0; i != rowCnt; ++i) {
+                for (size_t j = 0; j != colCnt; ++j) {
+                    if ((i * colCnt + j) < contents.size()) {
+                        screenChars[i][j] = contents[i * colCnt + j];
+                    } else {
+                        screenChars[i][j] = ' ';
+                    }
                 }
             }
             for (auto &row : screenColors) {
@@ -35,9 +38,10 @@ public:
     std::string getColor(unsigned rowIndex, unsigned colIndex) {
         return screenColors[rowIndex][colIndex];
     }
+    char getChar(unsigned rowIndex, unsigned colIndex) {
+        return screenChars[rowIndex][colIndex];
+    }
 
-private:
-    std::string contents;
 };
 
 #endif

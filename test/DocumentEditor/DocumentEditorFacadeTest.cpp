@@ -23,6 +23,9 @@ TEST( DocumentEditorFacade, drawScreen) {
 
     // Then
     STRCMP_EQUAL("black", documentEditorFacade.getColor(0,0).c_str());
+    LONGS_EQUAL('D', documentEditorFacade.getChar(0,0));
+    std::string tempStr(1, documentEditorFacade.getChar(0,1));
+    STRCMP_EQUAL("o", tempStr.c_str());
     STRCMP_EQUAL("black", documentEditorFacade.getColor(0,1).c_str());
     STRCMP_EQUAL("red", documentEditorFacade.getColor(0, 8).c_str());
     STRCMP_EQUAL("red", documentEditorFacade.getColor(0,9).c_str());
