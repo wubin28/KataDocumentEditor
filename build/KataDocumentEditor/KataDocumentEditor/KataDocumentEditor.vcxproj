@@ -18,6 +18,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\test\DocumentEditor\Character.h" />
     <ClInclude Include="..\..\..\test\DocumentEditor\DocumentEditorFacade.h" />
+    <ClInclude Include="..\..\..\test\DocumentEditor\GlyphFactory.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\test\DocumentEditor\DocumentEditorFacadeTest.cpp" />
