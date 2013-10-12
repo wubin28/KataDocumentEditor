@@ -8,18 +8,16 @@
 using std::size_t;
 using std::string;
 
-const size_t rowCnt = 3, colCnt = 40;
-char screenChars[rowCnt][colCnt];
-string screenColors[rowCnt][colCnt];
-string screenDrawnResult[rowCnt][colCnt];
+const size_t ROW_COUNT = 3;
+const size_t COL_COUNT = 40;
 
 class DocumentEditorFacade {
 public:
     DocumentEditorFacade(string contents = "") {
-        for (size_t i = 0; i != rowCnt; ++i) {
-            for (size_t j = 0; j != colCnt; ++j) {
-                if ((i * colCnt + j) < contents.size()) {
-                    screenChars[i][j] = contents[i * colCnt + j];
+        for (size_t i = 0; i != ROW_COUNT; ++i) {
+            for (size_t j = 0; j != COL_COUNT; ++j) {
+                if ((i * COL_COUNT + j) < contents.size()) {
+                    screenChars[i][j] = contents[i * COL_COUNT + j];
                 } else {
                     screenChars[i][j] = ' ';
                 }
@@ -37,8 +35,8 @@ public:
         }
     }
     void drawScreen() {
-        for (size_t i = 0; i != rowCnt; ++i) {
-            for (size_t j = 0; j != colCnt; ++j) {
+        for (size_t i = 0; i != ROW_COUNT; ++i) {
+            for (size_t j = 0; j != COL_COUNT; ++j) {
                 screenDrawnResult[i][j] = string(1, screenChars[i][j]) + "-" + screenColors[i][j];
             }
         }
@@ -54,6 +52,9 @@ public:
         return screenChars[rowIndex][colIndex];
     }
 private:
+    char screenChars[ROW_COUNT][COL_COUNT];
+    string screenColors[ROW_COUNT][COL_COUNT];
+    string screenDrawnResult[ROW_COUNT][COL_COUNT];
     GlyphFactory glyphFactory;
 };
 
