@@ -16,6 +16,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\test\DocumentEditor\Character.h" />
     <ClInclude Include="..\..\..\test\DocumentEditor\DocumentEditorFacade.h" />
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,9 @@
     <ClInclude Include="..\..\..\test\DocumentEditor\DocumentEditorFacade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\test\DocumentEditor\Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\test\DocumentEditor\DocumentEditorFacadeTest.cpp">

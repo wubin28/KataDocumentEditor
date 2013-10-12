@@ -3,12 +3,12 @@
 
 #include <string>
 #include <cstddef>
+#include "Character.h"
 using std::size_t;
 
 const size_t rowCnt = 3, colCnt = 40;
-char screenChars[rowCnt][colCnt];
+Character screenCharObjs[rowCnt][colCnt];
 std::string screenColors[rowCnt][colCnt];
-
 
 class DocumentEditorFacade {
 public:
@@ -16,9 +16,9 @@ public:
             for (size_t i = 0; i != rowCnt; ++i) {
                 for (size_t j = 0; j != colCnt; ++j) {
                     if ((i * colCnt + j) < contents.size()) {
-                        screenChars[i][j] = contents[i * colCnt + j];
+                        screenCharObjs[i][j] = GlyphFactory.createCharacter(contents[i * colCnt + j]);
                     } else {
-                        screenChars[i][j] = ' ';
+                        screenCharObjs[i][j] = GlyphFactory.createCharacter(' ');
                     }
                 }
             }
@@ -34,12 +34,13 @@ public:
         }
     }
     void drawScreen() {
+
     }
     std::string getColor(unsigned rowIndex, unsigned colIndex) {
         return screenColors[rowIndex][colIndex];
     }
     char getChar(unsigned rowIndex, unsigned colIndex) {
-        return screenChars[rowIndex][colIndex];
+        return screenCharObjs[rowIndex][colIndex].getChar();
     }
 
 };
