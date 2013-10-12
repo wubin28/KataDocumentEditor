@@ -36,13 +36,6 @@ public:
         return screenColors[rowIndex][colIndex];
     }
 
-    // Hello world demo.
-    int sayOne() {
-        return 1;
-    }
-    std::string sayHello() {
-        return "Hello!";
-    }
 private:
     std::string contents;
 };

@@ -7,16 +7,6 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 
-TEST( DocumentEditorFacade, creation) {
-    // Given
-    DocumentEditorFacade documentEditorFacade;
-
-    // When & Then
-    CHECK( 1 == documentEditorFacade.sayOne() );
-    LONGS_EQUAL( 1 , documentEditorFacade.sayOne() );
-    CHECK( "Hello!" == documentEditorFacade.sayHello() );
-}
-
 TEST( DocumentEditorFacade, drawScreen) {
     // Given
     DocumentEditorFacade documentEditorFacade("Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.");
