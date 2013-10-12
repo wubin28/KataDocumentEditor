@@ -6,17 +6,9 @@ using std::string;
 
 class Character {
 public:
-    Character(char c = ' '):
-        character(c) {
-    }
-    ~Character() {
-    }
-    char getCharacter() {
-        return character;
-    }
-    string draw(string color) {
-        return string(1, character) + "-" + color;
-    }
+    Character(char c);
+    char getCharacter(); 
+    string draw(string color); 
 private:
     char character;
 };

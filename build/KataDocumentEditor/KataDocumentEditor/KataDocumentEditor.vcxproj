@@ -21,7 +21,10 @@
     <ClInclude Include="..\..\..\test\DocumentEditor\GlyphFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\test\DocumentEditor\Character.cpp" />
+    <ClCompile Include="..\..\..\test\DocumentEditor\DocumentEditorFacade.cpp" />
     <ClCompile Include="..\..\..\test\DocumentEditor\DocumentEditorFacadeTest.cpp" />
+    <ClCompile Include="..\..\..\test\DocumentEditor\GlyphFactory.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C10D9E21-13CD-4C53-AF3F-B2F7A7502070}</ProjectGuid>
