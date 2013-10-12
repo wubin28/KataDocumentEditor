@@ -1,5 +1,8 @@
 #ifndef GlyphFactory_h
 #define GlyphFactory_h
+#include <iostream>
+using std::endl;
+using std::cout;
 
 const size_t NCHARCODES = 128;
 
@@ -11,11 +14,18 @@ public:
         }
     }
     ~GlyphFactory() {
+        for (size_t i = 0; i != NCHARCODES; ++i) {
+            delete _characters[i];
+            _characters[i] = nullptr;
+        }
     }
 
-    Character *createCharacter(char c) {
+    Character *getCharObj(char c) {
         if (!_characters[c]) {
             _characters[c] = new Character(c);
+            // delete _characters[c];
+            //_characters[c] = nullptr;
+            // cout << "_characters[" << string(1, c) << "] is nullptr." << endl;
         }
         return _characters[c];
     }

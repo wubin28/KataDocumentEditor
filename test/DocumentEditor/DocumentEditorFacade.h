@@ -3,10 +3,12 @@
 
 #include <string>
 #include <cstddef>
+#include <iostream>
 #include "Character.h"
 #include "GlyphFactory.h"
 using std::size_t;
 using std::string;
+using std::cout;
 
 const size_t ROW_COUNT = 3;
 const size_t COL_COUNT = 40;
@@ -28,6 +30,11 @@ public:
                 col = "black";
             }
         }
+        for (auto &row : screenDrawnResult) {
+            for (auto &col : row) {
+                col = "*";
+            }
+        }
     }
     void setColor(size_t rowIndex, size_t colIndex, size_t length, string color) {
         for (size_t i = 0; i != length; i++) {
@@ -37,9 +44,12 @@ public:
     void drawScreen() {
         for (size_t i = 0; i != ROW_COUNT; ++i) {
             for (size_t j = 0; j != COL_COUNT; ++j) {
-                screenDrawnResult[i][j] = string(1, screenChars[i][j]) + "-" + screenColors[i][j];
+                Character *charObj = glyphFactory.getCharObj(screenChars[i][j]);
+                screenDrawnResult[i][j] = charObj->draw(screenColors[i][j]);
+                charObj = nullptr;
             }
         }
+
     }
     string getColor(size_t rowIndex, size_t colIndex) {
         return screenColors[rowIndex][colIndex];
