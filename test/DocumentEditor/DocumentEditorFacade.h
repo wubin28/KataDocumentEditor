@@ -17,7 +17,6 @@ public:
     void drawScreen(); 
     string getColor(size_t rowIndex, size_t colIndex);
     string getScreenDrawnResult(size_t rowIndex, size_t colIndex); 
-    char getChar(size_t rowIndex, size_t colIndex); 
 private:
     char screenChars[ROW_COUNT][COL_COUNT];
     string screenColors[ROW_COUNT][COL_COUNT];

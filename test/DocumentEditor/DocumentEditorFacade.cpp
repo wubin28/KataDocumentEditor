@@ -46,6 +46,3 @@ string DocumentEditorFacade::getScreenDrawnResult(size_t rowIndex, size_t colInd
     return screenDrawnResult[rowIndex][colIndex];
 }
 
-char DocumentEditorFacade::getChar(size_t rowIndex, size_t colIndex) {
-    return screenChars[rowIndex][colIndex];
-}
