@@ -22,9 +22,9 @@ DocumentEditorFacade::DocumentEditorFacade(string contents = "") {
     }
 }
 
-void DocumentEditorFacade::setColor(size_t rowIndex, size_t colIndex, size_t length, string color) {
+void DocumentEditorFacade::setColor(size_t row, size_t column, size_t length, string color) {
     for (size_t i = 0; i != length; i++) {
-        screenColors[rowIndex][colIndex + i] = color;
+        screenColors[row][column + i] = color;
     }
 }
 
@@ -38,11 +38,11 @@ void DocumentEditorFacade::drawScreen() {
     }
 }
 
-string DocumentEditorFacade::getColor(size_t rowIndex, size_t colIndex) {
-    return screenColors[rowIndex][colIndex];
+string DocumentEditorFacade::getColor(size_t row, size_t column) {
+    return screenColors[row][column];
 }
 
-string DocumentEditorFacade::getScreenDrawnResult(size_t rowIndex, size_t colIndex) {
-    return screenDrawnResult[rowIndex][colIndex];
+string DocumentEditorFacade::getScreenDrawnResult(size_t row, size_t column) {
+    return screenDrawnResult[row][column];
 }
 

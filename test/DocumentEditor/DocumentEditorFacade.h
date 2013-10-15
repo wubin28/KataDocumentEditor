@@ -13,10 +13,10 @@ const size_t COL_COUNT = 40;
 class DocumentEditorFacade {
 public:
     DocumentEditorFacade(string contents); 
-    void setColor(size_t rowIndex, size_t colIndex, size_t length, string color); 
+    void setColor(size_t row, size_t column, size_t length, string color); 
     void drawScreen(); 
-    string getColor(size_t rowIndex, size_t colIndex);
-    string getScreenDrawnResult(size_t rowIndex, size_t colIndex); 
+    string getColor(size_t row, size_t column);
+    string getScreenDrawnResult(size_t row, size_t column); 
 private:
     char screenChars[ROW_COUNT][COL_COUNT];
     string screenColors[ROW_COUNT][COL_COUNT];
