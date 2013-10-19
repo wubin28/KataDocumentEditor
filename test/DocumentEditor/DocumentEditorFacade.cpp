@@ -31,9 +31,8 @@ void DocumentEditorFacade::setColor(size_t row, size_t column, size_t length, st
 void DocumentEditorFacade::drawScreen() {
     for (size_t i = 0; i != ROW_COUNT; ++i) {
         for (size_t j = 0; j != COL_COUNT; ++j) {
-            Character *charObj = glyphFactory.getCharObj(screenChars[i][j]);
+            shared_ptr<Character> charObj = glyphFactory.getCharObj(screenChars[i][j]);
             screenDrawnResult[i][j] = charObj->draw(screenColors[i][j]);
-            charObj = nullptr;
         }
     }
 }

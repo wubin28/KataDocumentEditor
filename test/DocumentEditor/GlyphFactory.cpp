@@ -1,4 +1,5 @@
 #include "GlyphFactory.h"
+using std::make_shared;
 
 GlyphFactory::GlyphFactory() {
     for (size_t i = 0; i != NCHARCODES; ++i) {
@@ -7,15 +8,11 @@ GlyphFactory::GlyphFactory() {
 }
 
 GlyphFactory::~GlyphFactory() {
-    for (size_t i = 0; i != NCHARCODES; ++i) {
-        delete _characters[i];
-        _characters[i] = nullptr;
-    }
 }
 
-Character *GlyphFactory::getCharObj(char c) {
+shared_ptr<Character> GlyphFactory::getCharObj(char c) {
     if (!_characters[c]) {
-        _characters[c] = new Character(c);
+        _characters[c] = make_shared<Character>(c);
     }
     return _characters[c];
 }
